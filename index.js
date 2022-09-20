@@ -8,7 +8,7 @@ app.use(express.urlencoded());
 app.use(cors());
 
 mongoose.connect(
-  "mongodb://localhost:27017/loginPage",
+  "mongodb+srv://metalicTank21:metalic1234@cluster0.bkfsv.mongodb.net/?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
