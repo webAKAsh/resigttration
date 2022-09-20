@@ -1,14 +1,16 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import dotenv from "dotenv"
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
+dotenv.config()
 
 mongoose.connect(
-  "mongodb+srv://metalicTank21:metalic1234@cluster0.bkfsv.mongodb.net/?retryWrites=true&w=majority",
+  process.env.URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
